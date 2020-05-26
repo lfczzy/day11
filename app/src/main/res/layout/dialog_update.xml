@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_white_pop"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_marginBottom="10dp"
+    >
+    <TextView
+        android:id="@+id/tv_pop_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:text="新版本来了"
+        android:textColor="@color/common_textcolor_black_33"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tv_pop_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:lineSpacingExtra="2dp"
+        android:paddingRight="15dp"
+        android:text="请求超时,请确定网络是否正常"
+        android:textSize="15sp"
+        android:textColor="@color/common_textcolor_black_33"
+        />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:background="@color/divider_line"
+        android:layout_marginTop="10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_cancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_no"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="取消"
+                android:textColor="@color/common_textcolor_gray_84"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:focusable="true"
+                android:clickable="true"
+                android:gravity="center"
+                />
+            <View
+                android:layout_width="0.4dp"
+                android:layout_height="match_parent"
+                android:background="@color/divider_line"
+                />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_ok"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="30dp"
+            android:text="立即更新"
+            android:textSize="16sp"
+            android:focusable="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:textColor="@color/main_color"
+            />
+    </LinearLayout>
+</LinearLayout>

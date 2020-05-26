@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <!---->
+<LinearLayout android:focusable="false"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <ImageView
+            android:focusable="false"
+            android:id="@+id/iv_img_url"
+            android:src="@mipmap/image_def"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerCrop"
+            android:background="@color/gray_color"
+            android:layout_width="100dp"
+            android:layout_height="136dp"
+            />
+        <com.ztcx.videoplay.view.MarqueeText
+            android:id="@+id/tv_video_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="center_vertical"
+            android:text="影视名称"
+            android:textColor="@color/black"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusableInTouchMode="true"
+            android:textSize="14dp"/>
+
+    </LinearLayout>
+

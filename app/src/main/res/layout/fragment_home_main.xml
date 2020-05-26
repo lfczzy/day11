@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:background="@color/main_color"
+        android:layout_width="match_parent"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="15dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_search"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_edt_search_bg_white"
+            android:gravity="center"
+            android:layout_height="25dp">
+            <TextView
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:text="搜索"
+                android:textSize="12sp"
+                android:drawablePadding="5dp"
+                android:textColor="@color/common_textcolor_gray_99"
+                android:drawableLeft="@mipmap/ic_search"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_history"
+            android:layout_width="30dp"
+            android:layout_marginLeft="5dp"
+            android:src="@mipmap/ic_history"
+            android:layout_height="30dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/main_color"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:src="@mipmap/ic_aqy"
+            android:visibility="gone"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content" />
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/tl_7"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            tl:tl_textsize="16sp"
+            tl:tl_indicator_corner_radius="1.5dp"
+            tl:tl_indicator_height="3dp"
+            tl:tl_indicator_width="10dp"/>
+    </LinearLayout>
+    <TextView
+        android:background="@color/main_color"
+        android:layout_width="match_parent"
+        android:layout_height="5dp" />
+
+    <Button
+        android:id="@+id/btn"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:text="解析"
+        android:layout_height="wrap_content" />
+
+
+    <android.support.v4.view.ViewPager
+        android:layout_weight="1"
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+</LinearLayout>

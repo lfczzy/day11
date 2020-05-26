@@ -1,0 +1,120 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    //    签名
+    signingConfigs {
+        debugConfig {
+            storeFile file('bcys.jks')      //签名文件
+            storePassword "123456"
+            keyAlias "key0"
+            keyPassword "123456"  //签名密码
+        }
+        release {
+            storeFile file('bcys.jks')      //签名文件
+            storePassword "123456"
+            keyAlias "key1"
+            keyPassword "123456"  //签名密码
+        }
+    }
+
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.ztcx.videoplay"
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 100
+        versionName "1.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86_64"
+        }
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.debugConfig
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            assets.srcDirs = ['src/main/assets', 'src/main/assets/']
+        }
+    }
+
+    productFlavors.all { flavor ->
+        flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+
+    flavorDimensions "mark" //相当于一个标记
+
+    productFlavors {
+//        tencent { dimension "mark" }
+//        huawei { dimension "mark" }
+//        mi { dimension "mark" }
+//        vivo { dimension "mark" }
+//        oppo { dimension "mark" }
+//        bmob { dimension "mark" }
+        phonetv { dimension "mark" }
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "bcyy_v${defaultConfig.versionName}_${variant.productFlavors[0].name}.apk"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    //1.1.0 API改动过大，老用户升级需谨慎
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-16'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-16'
+    //没有使用特殊Header，可以不加这行
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    //版本 23以上（必须）
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    //万能的adapter
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
+    implementation files('libs/jsoup-1.11.2.jar')
+    //轮播图框架
+    implementation 'com.youth.banner:banner:1.4.10'
+    //最新版本
+    //流式布局
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+    //指示器空间
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    implementation 'cn.bmob.android:bmob-sdk:3.4.6'
+    implementation project(':YCVideoPlayerLib')
+    //定位
+    implementation 'com.amap.api:location:latest.integration'
+    //动态权限申请库
+    implementation 'pub.devrel:easypermissions:1.3.0'
+    //友盟统计
+    implementation 'com.umeng.umsdk:analytics:7.5.4'
+    //PushSDK必须依赖基础组件库，所以需要加入对应依赖
+    implementation 'com.umeng.umsdk:common:1.5.4'
+    //PushSDK必须依赖utdid库，所以需要加入对应依赖
+    implementation 'com.umeng.umsdk:utdid:1.1.5.3'
+    //PushSDK
+    implementation 'com.umeng.umsdk:push:5.0.2'
+    //x5播放器
+    implementation files('libs/tbs_sdk_thirdapp_v4.3.0.1072.jar')
+    implementation files('libs/mta-android-sdk-3.1.4.jar')
+    //json解析器
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.lzy.net:okgo:3.0.4'
+}

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_weight="1"
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+      />
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:elevation="2dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <RadioButton
+            android:id="@+id/rb0"
+            android:button="@null"
+            android:layout_width="0dp"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/select_home"
+            android:textColor="@drawable/select_native_main_text_color"
+            android:text="首页"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/rb1"
+            android:button="@null"
+            android:layout_width="0dp"
+            android:textSize="10sp"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/select_sort"
+            android:textColor="@drawable/select_native_main_text_color"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="分类"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/rb2"
+            android:button="@null"
+            android:layout_width="0dp"
+            android:drawablePadding="2dp"
+            android:textSize="12sp"
+            android:drawableTop="@drawable/select_member"
+            android:textColor="@drawable/select_native_main_text_color"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="全网VIP"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/rb3"
+            android:button="@null"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/select_me"
+            android:textColor="@drawable/select_native_main_text_color"
+            android:text="我的"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:visibility="gone"
+            android:id="@+id/rb4"
+            android:button="@null"
+            android:layout_width="0dp"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@drawable/select_native_main_text_color"
+            android:drawablePadding="5dp"
+            android:text="动漫"
+            android:layout_height="wrap_content" />
+
+    </RadioGroup>
+
+
+</LinearLayout>

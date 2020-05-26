@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:padding="15dp"
+    android:layout_height="wrap_content">
+    <!--精彩短评论-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content" >
+        <com.ztcx.videoplay.view.CircleImageView
+            android:id="@+id/iv_user_logo"
+            android:layout_width="30dp"
+            android:src="@mipmap/ic_no_data"
+            android:layout_height="30dp" />
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:text="用胡"
+            android:textColor="@color/common_textcolor_gray_product_a7"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/common_textcolor_black_33"
+        android:layout_width="match_parent"
+        android:text="对于国产翻拍片来讲，最近看过的若干部片子基本都是失败品，因为文化差异导致翻拍后无法落..."
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

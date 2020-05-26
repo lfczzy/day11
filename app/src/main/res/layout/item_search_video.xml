@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!---->
+<LinearLayout android:focusable="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/rl_video_image"
+        android:layout_width="100dp"
+        android:layout_height="136dp">
+
+        <ImageView
+            android:id="@+id/iv_img_url"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/gray_color"
+            android:focusable="false"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/image_def" />
+
+        <TextView
+            android:id="@+id/tv_update_info"
+            android:layout_width="match_parent"
+            android:text="更新至48集"
+            android:textSize="12sp"
+            android:background="@mipmap/home_video_bg"
+            android:padding="5dp"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:paddingLeft="10dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_video_name"
+                android:layout_width="match_parent"
+                android:text="战狼2"
+                android:textColor="@color/common_textcolor_black_33"
+                android:textStyle="bold"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_type_name"
+                android:layout_marginLeft="5dp"
+                android:text="efjaj"
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_area"
+                android:layout_width="wrap_content"
+                android:text="地区：武汉"
+                android:textSize="12sp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_yanyuan"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:text="地区：武汉"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textSize="12sp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_detail"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:maxLines="6"
+            android:layout_width="wrap_content"
+            android:ellipsize="end"
+            android:textSize="12sp"
+            android:text="传说江湖中有一战狼，战无不胜，武功深不可测。年轻人BEN前往挑战，接触中得知战狼的过去……孤儿阿威流落乡村，又遭山贼伏击村落。一个衣着光鲜、沉默寡言的刀客前来相救，用神速刀法如斩乱麻一般将来敌击退，并道出此行的目的是找寻昔日的情侣。当战狼在残破小屋遇上青梅竹马的情人“怡”时，却又因失去记忆难成姻缘，而当两人得搭昔日情时，“怡”偏偏被凶残的七狼党抓去，战狼别无选择，只有独自向凶狠残暴的七狼党发起进攻……"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>
+

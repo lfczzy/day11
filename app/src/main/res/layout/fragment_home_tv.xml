@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
+                android:background="@color/gray_color"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"></com.youth.banner.Banner>
+
+            <!--排行榜-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="5dp"
+                        android:background="@drawable/shape_yuan"
+                        android:layout_height="5dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:text="热播排行榜"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/common_textcolor_black_33"
+                        android:textSize="16sp"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="查看全部>>"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/main_color"
+                        android:textSize="16sp"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_ranking_movie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+            <!--抢先看-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="5dp"
+                        android:background="@drawable/shape_yuan"
+                        android:layout_height="5dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:text="大片抢先看"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/common_textcolor_black_33"
+                        android:textSize="16sp"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_new_movie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!--猜你喜欢-->
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="5dp"
+                        android:background="@drawable/shape_yuan"
+                        android:layout_height="5dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:text="猜你喜欢"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/common_textcolor_black_33"
+                        android:textSize="16sp"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_recommend_movie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!--网络热播-->
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="5dp"
+                        android:background="@drawable/shape_yuan"
+                        android:layout_height="5dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:text="网络热播"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/common_textcolor_black_33"
+                        android:textSize="16sp"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_hot_movie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <!--全球热映-->
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="5dp"
+                        android:background="@drawable/shape_yuan"
+                        android:layout_height="5dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:text="全球热映"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/common_textcolor_black_33"
+                        android:textSize="16sp"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_hot_all_movie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:text="查看全部"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:background="@color/main_color_bg"
+                android:textColor="@color/common_textcolor_gray_99"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+</LinearLayout>
